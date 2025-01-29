@@ -1,0 +1,44 @@
+{
+	"schemaVersion": 1,
+	"id": "hastepotionmod",
+	"version": "${version}",
+	"name": "hastepotionmod",
+	"description": "Super simple mod that adds brewable haste potions!",
+	"authors": [
+		"darealPSL"
+	],
+	"contact": {
+		"homepage": "https://fabricmc.net/",
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
+	},
+	"license": "MIT",
+	"icon": "assets/hastepotionmod/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"com.hastepotionmod.Hastepotionmod"
+		],
+		"client": [
+			"com.hastepotionmod.HastepotionmodClient"
+		],
+		"fabric-datagen": [
+			"com.hastepotionmod.HastepotionmodDataGenerator"
+		]
+	},
+	"mixins": [
+		"hastepotionmod.mixins.json",
+		{
+			"config": "hastepotionmod.client.mixins.json",
+			"environment": "client"
+		}
+	],
+	"depends": {
+		"fabricloader": ">=0.16.10",
+		"minecraft": "~1.21.3",
+		"java": ">=21",
+		"fabric-api": "*"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}
